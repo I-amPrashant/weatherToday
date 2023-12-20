@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="icons/weather.jpg" type="image/png">
+    <title>Weather Today</title>
+    <link rel="stylesheet" href="styles.css"/>
+  </head>
+  <body>
+    <main>
+      <div id="main-container">
+        <div id="top-section">
+          <div id="logo-wrapper">
+            <img src="icons/logo.svg" alt="logo_pic" />
+          </div>
+          <div id="search-button">
+            <input
+              type="text"
+              name="search"
+              id="search"
+              placeholder="Search for cities"
+              autocomplete="off"
+            />
+            <div id="autocompleteContainer" hidden>
+            </div>
+        </div>
+        <div id="cel-far-button-wrapper">
+              <button type="submit" id="citySubmit">Search</button>
+          </div>
+        </div>
+
+        <div id="city-wrapper">
+          <div id="city-temp-wrapper">
+            <h2 id="cityName"></h2>
+            <h1 style="margin-top: 10px">
+              <span id="current-temp" style="color: rgb(55 54 54);"></span><span id="min-temp" style="margin-left: 35px;color:var(--icon-color);"></span>
+            </h2>
+          </div>
+          <div id="temp-icon-wrapper">
+            <img
+              src="#"
+              alt="temp_indicator"
+              id="current_temp_icon"
+              style="height: 100px;width:100px;"
+            />
+          </div>
+        </div>
+
+        <div id="todays-forecast">
+          <h3>TODAY'S FORECAST</h3>
+          <div id="temp-list">
+            <!-- <div class="temp-item">
+              <h3 id="hourTime">06:00</h3>
+              <img src="#" alt="temp_indicator" id="hourTempImg"/>
+              <h2 id="hourTemp" style="color: rgb(34, 34, 34);font-size: 16px;">10<sup>°</sup></h2>
+            </div> -->
+          </div>
+        </div>
+
+        <div id="weather-details">
+          <h4>WEATHER DETAILS</h4>
+          <div id="temp-detail-list">
+            <div class="temp-detail-item">
+              <div class="name-time">
+                <h4>Sunrise</h4>
+                <h2 style="margin-top: 5px" id="sunriseTime"></h2>
+              </div>
+              <div class="temp-detail-icon">
+                <img src="icons/sunrise-icon.svg" alt="icon"/>
+              </div>
+            </div>
+            <div class="temp-detail-item">
+              <div class="name-time">
+                <h4>Sunset</h4>
+                <h2 style="margin-top: 5px" id="sunsetTime"></h2>
+              </div>
+              <div class="temp-detail-icon">
+                <img src="icons/sunset-icon.svg" alt="icon"/>
+              </div>
+            </div>
+            <div class="temp-detail-item">
+              <div class="name-time">
+                <h4>Chance of rain</h4>
+                <h2 style="margin-top: 5px" id="chanceOfRain"></h2>
+              </div>
+              <div class="temp-detail-icon">
+                <img src="icons/drop-icon.svg" alt="icon"/>
+              </div>
+            </div>
+            <div class="temp-detail-item">
+              <div class="name-time">
+                <h4>Pressure</h4>
+                <h2 style="margin-top: 5px" id="Pressure"></h2>
+              </div>
+              <div class="temp-detail-icon">
+                <img src="icons/pressure-icon.svg" alt="icon"/>
+              </div>
+            </div>
+            <div class="temp-detail-item">
+              <div class="name-time">
+                <h4>Wind</h4>
+                <h2 style="margin-top: 5px" id="Wind"></h2>
+              </div>
+              <div class="temp-detail-icon">
+                <img src="icons/wind-icon.svg" alt="icon"/>
+              </div>
+            </div>
+            <div class="temp-detail-item">
+              <div class="name-time">
+                <h4>UV index</h4>
+                <h2 style="margin-top: 5px" id="UVIndex"></h2>
+              </div>
+              <div class="temp-detail-icon">
+                <img src="icons/sun-icon.svg" alt="icon"/>
+              </div>
+            </div>
+            <div class="temp-detail-item">
+              <div class="name-time">
+                <h4>Feels like</h4>
+                <h2 style="margin-top: 5px" id="FeelsLike"></h2>
+              </div>
+              <div class="temp-detail-icon">
+                <img src="icons/temperature-icon.svg" alt="icon"/>
+              </div>
+            </div>
+            <div class="temp-detail-item">
+              <div class="name-time">
+                <h4>Visibility</h4>
+                <h2 style="margin-top: 5px" id="Visibility"></h2>
+              </div>
+              <div class="temp-detail-icon">
+                <img src="icons/visibility-icon.svg" alt="icon"/>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <script  src="script.js"></script>
+  </body>
+</html>
