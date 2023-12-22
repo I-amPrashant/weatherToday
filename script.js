@@ -60,6 +60,7 @@ document.addEventListener('DOMContentLoaded', function () {
                     Visibility.innerHTML=`${result.current.vis_km} km`;
             } catch (error) {
               console.error(error);
+              alert("Please enter correct name of city....")
               hourlyForecastWrapper.innerHTML=previousContent;
             }
           }
@@ -122,7 +123,7 @@ function clearSuggestions() {
                 document.getElementById("autocompleteContainer").innerHTML = '';
                 document.getElementById("autocompleteContainer").style.display = 'none';
             }
-            document.addEventListener('click', function (event) {
+            document.addEventListener('click', function (event){
                 if (!event.target.closest('#autocompleteContainer')) {
                     clearSuggestions();
                 }
