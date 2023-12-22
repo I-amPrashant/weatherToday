@@ -60,7 +60,7 @@ document.addEventListener('DOMContentLoaded', function () {
                     Visibility.innerHTML=`${result.current.vis_km} km`;
             } catch (error) {
               console.error(error);
-              alert("Please enter correct name of city....")
+              alert("Please enter correct name of city....");
               hourlyForecastWrapper.innerHTML=previousContent;
             }
           }
@@ -72,7 +72,7 @@ document.addEventListener('DOMContentLoaded', function () {
 document.getElementById("citySubmit").addEventListener("click", ()=>{
     getCity(search.value);
 })
-getCity("kathmandu")
+getCity("kathmandu");
 
 
 let debounceTimer;
