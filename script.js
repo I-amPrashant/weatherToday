@@ -28,6 +28,7 @@ document.addEventListener("DOMContentLoaded", function () {
         const response = await fetch(url, options);
         const result = await response.json();
         dataLoaded = true;
+        celsiusFahrenheit.innerHTML === "<sup>°</sup>F"
         previousContent = hourlyForecastWrapper.innerHTML;
         hourlyForecastWrapper.innerHTML = "";
         document.getElementById(
@@ -138,7 +139,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 
-  function handleChange() {
+  function handleChange(){
     let celsius = document.getElementsByClassName("celsius");
     if (dataLoaded) {
       if (celsiusFahrenheit.innerHTML === "<sup>°</sup>F") {
