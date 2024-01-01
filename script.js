@@ -9,7 +9,9 @@ document.addEventListener('DOMContentLoaded', function () {
         UVIndex=document.getElementById("UVIndex"),
         FeelsLike=document.getElementById("FeelsLike"),
         Visibility=document.getElementById("Visibility"),
-        search=document.getElementById("search");
+        search=document.getElementById("search"),
+        celsiusFahrenheit=document.getElementById("celsius-fahrenheit");
+
         
         let previousContent;
         const apiKey = "71ac65a6fdmshf408c19fd20cd34p161682jsnddf95b578a9e";
@@ -45,7 +47,7 @@ document.addEventListener('DOMContentLoaded', function () {
                         <div class="temp-item">
                   <h3 id="hourTime">${Time}</h3>
                   <img src="${element.condition.icon}" alt="temp_indicator" id="hourTempImg"/>
-                  <h2 id="hourTemp" style="color: rgb(55 54 54);font-size: 16px;">${element.temp_c}<sup>°</sup></h2>
+                  <h2 id="hourTemp" style="color: rgb(55 54 54);font-size: 16px;"  class="celsius">${element.temp_c} <sup>°</sup></h2>
                 </div>
                         `
                     ));
@@ -58,6 +60,27 @@ document.addEventListener('DOMContentLoaded', function () {
                     UVIndex.innerHTML=`${result.current.uv} of 10`;
                     FeelsLike.innerHTML=`${result.current.feelslike_c} <sup>°</sup>`;
                     Visibility.innerHTML=`${result.current.vis_km} km`;
+
+
+               
+            celsiusFahrenheit.addEventListener("click", ()=>{
+              let celsius=document.getElementsByClassName("celsius");
+                 if(celsiusFahrenheit.innerHTML==="<sup>°</sup>F"){
+                   celsiusFahrenheit.innerHTML="<sup>°</sup>C";
+                  for(const item of celsius){
+                    let temp=item.textContent.split(" ")[0];
+                    let fTemp=(9/5)*temp+32;
+                    item.innerHTML=`${fTemp.toFixed(0)} <sup>°</sup>`;
+                  }
+                 }else{
+                   celsiusFahrenheit.innerHTML="<sup>°</sup>F";
+                   for(const item of celsius){
+                    let temp=item.textContent.split(" ")[0];
+                    let cTemp=(5/9)*(temp-32);
+                    item.innerHTML=`${cTemp.toFixed(0)} <sup>°</sup>`;
+                  }
+                 }
+            })     
             } catch (error) {
               console.error(error);
               alert("Please enter correct name of city....");
@@ -129,5 +152,8 @@ function clearSuggestions() {
                 }
             });
 
+
+
            });
+
      

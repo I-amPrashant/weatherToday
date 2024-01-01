@@ -34,7 +34,7 @@
           <div id="city-temp-wrapper">
             <h2 id="cityName"></h2>
             <h1 style="margin-top: 10px">
-              <span id="current-temp" style="color: rgb(55 54 54);"></span><span id="min-temp" style="margin-left: 35px;color:var(--icon-color);"></span>
+              <span id="current-temp" style="color: rgb(55 54 54);" class="celsius"></span><span id="min-temp" style="margin-left: 35px;color:var(--icon-color);"  class="celsius"></span>
             </h2>
           </div>
           <div id="temp-icon-wrapper">
@@ -118,7 +118,7 @@
             <div class="temp-detail-item">
               <div class="name-time">
                 <h4>Feels like</h4>
-                <h2 style="margin-top: 5px" id="FeelsLike"></h2>
+                <h2 style="margin-top: 5px" id="FeelsLike"  class="celsius"></h2>
               </div>
               <div class="temp-detail-icon">
                 <img src="icons/temperature-icon.svg" alt="icon"/>
@@ -135,6 +135,7 @@
             </div>
           </div>
         </div>
+        <button id="celsius-fahrenheit"><sup>°</sup>F</button>
       </div>
     </main>
     <script  src="script.js"></script>

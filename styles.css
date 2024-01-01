@@ -154,7 +154,19 @@ input{
 #weather-details img{
     opacity: .6;
 }
-
+#celsius-fahrenheit{
+    position: absolute;
+    top: 79px;
+    right: 30px;
+    background-color: #5C6BC0;
+    border-radius: 33%;
+    outline: none;
+    border: none;
+    padding: 10px;
+    color: #F5F5F5;
+    cursor: pointer;
+    font-weight: bold;
+}
 @media (max-width:1020px){
     #main-container{
         border-radius: 0;
