@@ -60,7 +60,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
         sunriseTime.innerHTML = hourArray.astro.sunrise.split(" ")[0];
         sunsetTime.innerHTML = hourArray.astro.sunset.split(" ")[0];
-        chanceOfRain.innerHTML = `${hourArray.day.daily_will_it_rain}%`;
+        chanceOfRain.innerHTML = `${hourArray.day.daily_chance_of_rain}%`;
         Pressure.innerHTML = `${result.current.pressure_mb} mb`;
         Wind.innerHTML = `${result.current.wind_kph} km/h`;
         UVIndex.innerHTML = `${result.current.uv} of 10`;
